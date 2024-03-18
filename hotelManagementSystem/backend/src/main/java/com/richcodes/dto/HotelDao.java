@@ -9,4 +9,6 @@ import java.util.Optional;
 public interface HotelDao {
     List<Hotel> getAllHotels();
     Optional<Hotel> getHotelById(Integer hotelId);
+    void saveHotel(Hotel hotel);
+    void deleteHotel(Integer id);
 }

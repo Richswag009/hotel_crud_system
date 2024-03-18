@@ -27,8 +27,17 @@ public class HotelDataAccessService implements HotelDao{
         return hotelRepository.findById(hotelId);
     }
 
-//    @Override
+    @Override
     public void saveHotel(Hotel hotel) {
         hotelRepository.save(hotel);
+    }
+
+    @Override
+    public void deleteHotel(Integer id) {
+        hotelRepository.deleteById(id);
+    }
+
+    public  void updateHotel(Hotel update){
+        hotelRepository.save(update);
     }
 }
